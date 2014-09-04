@@ -1,3 +1,11 @@
+版本：V2.0.8 2014-08-28
+新功能/改进：
+1、EMMessage中新添加了isOfflineMessage属性，在didReceiveMessage的时候， 可以根据是否为离线消息而决定是否重绘界面。 同时在offline message在接收过程中， 会有willReceiveOfflineMessages和didFinishedReceiveOfflineMessages：发出，用户可以根据此事件决定是否需要重绘UI。
+2、屏蔽群消息：接收并提醒 && 只接收不提醒。
+Bug Fix：
+1、消息中的图片缩略图，在某些情况下，size.height为0。
+2、修正断线重连方面：切到后台，3分钟后，切回前台，有时会掉线的问题。
+
 版本：V2.0.7 2014-08-14
 新功能/改进：
 1、创建群组时，支持传最大成员数 EMGroupStyleSetting.groupMaxUsersCount，3 ~ 2000，ios默认是200；
