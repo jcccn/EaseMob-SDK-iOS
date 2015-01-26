@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'EaseMob'
-  spec.version      = '2.1.1'
+  spec.version      = '2.1.2'
   spec.summary      = 'The iOS SDK for EaseMob IM cloud service.'
   spec.homepage     = 'https://github.com/jcccn/EaseMob-SDK-iOS'
   spec.author       = { 'Chuncheng Jiang' => 'jccuestc@gmail.com' }
@@ -8,12 +8,12 @@ Pod::Spec.new do |spec|
                        ©2014 EaseMob Inc.
                        LICENSE
                      }
-  spec.source       =  {:git => 'https://github.com/jcccn/EaseMob-SDK-iOS.git', :tag => '2.1.1'}
+  spec.source       =  {:git => 'https://github.com/jcccn/EaseMob-SDK-iOS.git', :tag => '2.1.2'}
   spec.source_files = "EaseMobSDK/**/*.{h}"
   spec.platform     = :ios, '6.0'
   spec.requires_arc = true
   spec.frameworks = 'Foundation', 'UIKit', 'MapKit', 'ImageIO', 'CoreLocation', 'Security', 'MobileCoreServices',  'SystemConfiguration', 'AddressBook', 'CFNetwork', 'CoreGraphics'
-  spec.libraries    = 'iconv', 'xml2', 'z', 'resolv', 'stdc++'
+  spec.libraries    = 'iconv', 'xml2', 'z', 'resolv', 'stdc++', 'sqlite3'
   spec.resource     = 'EaseMobSDK/resources/EaseMob.bundle'
   spec.vendored_libraries = 'EaseMobSDK/lib/libEaseMobClientSDKLite.a'
   spec.xcconfig     = {'OTHER_LDFLAGS' => '-lObjC'}

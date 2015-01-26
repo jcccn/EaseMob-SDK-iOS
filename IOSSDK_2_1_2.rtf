@@ -1,0 +1,842 @@
+{\rtf1\ansi\ansicpg936\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 Helvetica-Light;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red255\green39\blue18;\red254\green73\blue64;\red114\green44\blue253;
+\red253\green154\blue0;\red65\green204\blue69;\red0\green41\blue57;\red253\green165\blue49;\red74\green0\blue230;
+\red201\green113\blue0;\red228\green124\blue72;\red0\green60\blue82;\red0\green20\blue69;\red38\green38\blue38;
+\red255\green255\blue255;\red151\green85\blue0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww23160\viewh13660\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs28 \cf0 IOS SDK 2.1.2 release note\
+\
+
+\f1 \'c7\'bf\'c1\'d2\'bd\'a8\'d2\'e9\'cf\'fb\'b3\'fd\'cb\'f9\'d3\'d0
+\f0 warning
+\f1 \'a3\'ac\'cc\'e6\'bb\'bb\'ce\'d2\'c3\'c7\'b5\'c4\'d0\'c2\'b7\'bd\'b7\'a8\'a3\'ac\'be\'c9\'b7\'bd\'b7\'a8\'b2\'bb\'d4\'d9\'cc\'e1\'b9\'a9\'ce\'ac\'bb\'a4\'a1\'a3
+\f0\fs24 \
+
+\f1 \
+
+\f2\fs28 \cf2 1
+\f1 \'a1\'a2\'b8\'fc\'bb\'bb\'c1\'cb
+\f2 database
+\f1 \'a3\'ac\'b8\'c4\'b6\'af\'bd\'cf\'b4\'f3\'a3\'ac
+\f2 \
+step1
+\f1 \'a1\'a2\'d0\'e8\'d2\'aa\'d0\'c2\'d2\'fd\'c8\'eb
+\f2 libsqlite3.dylib
+\f1 \'a3\'bb
+\f2 \
+step2
+\f1 \'a1\'a2\'d4\'da\'b5\'c7\'c2\'bd\'b3\'c9\'b9\'a6\'d6\'ae\'ba\'f3\'b5\'f7\'d3\'c3
+\f2 [
+\f0 \CocoaLigature0 importDataToNewDatabase
+\f2 \CocoaLigature1 ]
+\f1 \'bd\'ab\'ca\'fd\'be\'dd\'b5\'bc\'c8\'eb\'d0\'c2\'b5\'c4\'ca\'fd\'be\'dd\'bf\'e2\'a3\'ac\'ca\'b9\'d3\'c3\'ca\'be\'c0\'fd
+\f2 \
+		
+\f0 \cf3 \CocoaLigature0 EMError *error = [[EaseMob sharedInstance].chatManager importDataToNewDatabase];\
+\pard\tx674\pardeftab674\pardirnatural
+\cf3        if (!error) \{\
+          error = [[EaseMob sharedInstance].chatManager loadDataFromDatabase];\
+       \}
+\f1 \cf2 \CocoaLigature1 \'a3\'bb
+\f2 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf2 step3
+\f1 \'a1\'a2\'bc\'ec\'b2\'e2\'b9\'a4\'b3\'cc\'d6\'d0\'b1\'e0\'d2\'eb\'b2\'fa\'c9\'fa\'b5\'c4\'cb\'f9\'d3\'d0
+\f2 error
+\f1 \'ba\'cd
+\f2 warning
+\f1 \'a3\'ac\'bd\'d3\'bf\'da\'b5\'c4\'b8\'fc\'b8\'c4\'bb\'e1\'d4\'ec\'b3\'c9\'b1\'e0\'d2\'eb\'b5\'c4\'ca\'a7\'b0\'dc\'bb\'f2\'be\'af\'b8\'e6\'a1\'a3
+\f2 \
+\
+2
+\f1 \'a1\'a2\'bd\'d3\'ca\'d5\'cf\'fb\'cf\'a2
+\f2 \
+a> 
+\f1 \'c0\'eb\'cf\'df\'cf\'fb\'cf\'a2\'d0\'e8\'d2\'aa\'bc\'e0\'cc\'fd
+\f2 [
+\f0 \CocoaLigature0 didFinishedReceiveOfflineMessages:
+\f2 \CocoaLigature1 ]
+\f1 \'bb\'d8\'b5\'f7\'b7\'bd\'b7\'a8\'a3\'ac\'b2\'bb\'bb\'e1\'d4\'da
+\f2 [
+\f0 \CocoaLigature0 didReceiveMessage:
+\f2 \CocoaLigature1 ]
+\f1 \'b7\'b5\'bb\'d8\'a3\'bb
+\f2 \
+b> cmd
+\f1 \'c0\'e0\'d0\'cd\'b5\'c4\'cf\'fb\'cf\'a2\'bc\'e0\'cc\'fd
+\f2 [
+\f0 \CocoaLigature0 didReceiveCmdMessage:
+\f2 \CocoaLigature1 ]
+\f1 \'a3\'ac\'b2\'bb\'bb\'e1\'d4\'da
+\f2 [
+\f0 \CocoaLigature0 didReceiveMessage:
+\f2 \CocoaLigature1 ]
+\f1 \'b7\'b5\'bb\'d8\'a1\'a3
+\f2 \
+\
+3
+\f1 \'a1\'a2\'b2\'e5\'c8\'eb\'cf\'fb\'cf\'a2
+\f2 \
+a> 
+\f1 \'d0\'e8\'d2\'aa\'c9\'e8\'d6\'c3
+\f2 message.conversationChatter
+\f1 \'a3\'ac\'b4\'cb\'cf\'ee\'ce\'de\'d6\'b5\'bb\'e1\'b2\'e5\'c8\'eb\'ca\'a7\'b0\'dc\'a3\'bb
+\f2 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf4 4
+\f1 \'a1\'a2\'cc\'e6\'bb\'bb\'bf\'ec\'bd\'dd\'b7\'bd\'b7\'a8
+\f2 \
+setp1
+\f1 \'a1\'a2\'bd\'ab\'be\'c9\'b5\'c4
+\f2 sdk
+\f1 \'b4\'d3\'b9\'a4\'b3\'cc\'d6\'d0\'c9\'be\'b3\'fd\'a3\'ac\'b5\'bc\'c8\'eb\'d0\'c2\'b5\'c4
+\f2 sdk
+\f1 \'a3\'bb
+\f2 \
+setp2
+\f1 \'a1\'a2\'b1\'e0\'d2\'eb\'b9\'a4\'b3\'cc\'a3\'ac\'bb\'e1\'b3\'f6\'cf\'d6\'d2\'bb\'cf\'b5\'c1\'d0\'b5\'c4
+\f2 error
+\f1 \'ba\'cd
+\f2 warning;\
+setp3
+\f1 \'a1\'a2\'bd\'ab
+\f2 error
+\f1 \'ba\'cd
+\f2 warning
+\f1 \'d6\'f0\'b8\'f6\'bb\'f7\'c6\'c6\'a3\'ac\'c7\'a7\'cd\'f2\'b2\'bb\'d2\'aa\'ba\'f6\'c2\'d4
+\f2 warning
+\f1 \'a3\'ac\'c7\'d7
+\f2 ~~
+\f1 \'a1\'a3\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+
+\fs24 \
+\'bd\'d3\'bf\'da\'cf\'e0\'b9\'d8\'b8\'c4\'b6\'af\'c8\'e7\'cf\'c2\'a3\'ba\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs72 \cf4 \'d2\'bb\'a1\'a2 new api
+\fs24 \cf0 \
+\
+
+\fs28 \cf5 A\'a1\'a2IChatManagerLogin
+\fs24 \cf0 \
+\
+1\'a1\'a2
+\f3\fs28 \cf6 \CocoaLigature0 /*!\
+\pard\tx674\pardeftab674\pardirnatural
+\cf6  @method\
+ @brief 
+\f1 \'bd\'ab\'ca\'fd\'be\'dd\'bf\'e2\'ca\'fd\'be\'dd\'b5\'bc\'c8\'eb\'d0\'c2\'b5\'c4\'ca\'fd\'be\'dd\'bf\'e2\'a3\'ac\'be\'c9\'b0\'e6
+\f3 sdk
+\f1 \'ca\'fd\'be\'dd\'bf\'e2\'b2\'c9\'d3\'c3
+\f3 CoreData,
+\f1 \'b4\'d3
+\f3 2.1.0
+\f1 \'b0\'e6\'b1\'be\'bf\'aa\'ca\'bc\'a3\'ac\'bb\'bb\'b3\'c9
+\f3 Sqlite\
+ @discussion 
+\f1 \'cd\'ac\'b2\'bd\'b7\'bd\'b7\'a8\'a3\'ac\'b5\'c7\'c2\'bc\'b3\'c9\'b9\'a6\'d6\'ae\'ba\'f3\'b5\'f7\'d3\'c3
+\f3 \
+ @result     
+\f1 \'b4\'ed\'ce\'f3\'d0\'c5\'cf\'a2
+\f3 \
+ */\cf1 \
+\cf7 - (EMError *)importDataToNewDatabase;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief  
+\f1 \'b5\'f7\'d3\'c3
+\f3 sdk
+\f1 \'b5\'c7\'c2\'bc\'bd\'d3\'bf\'da\'a3\'ac\'b5\'c7\'c2\'bd\'b3\'c9\'b9\'a6\'d6\'ae\'ba\'f3\'a3\'ac
+\f3 sdk
+\f1 \'c4\'da\'b2\'bf\'bb\'e1\'c4\'ac\'c8\'cf\'b5\'f7\'d3\'c3\'d2\'bb\'b4\'ce\'b8\'c3\'ba\'af\'ca\'fd
+\f3 \
+          
+\f1 \'b4\'d3\'ca\'fd\'be\'dd\'bf\'e2\'bb\'f1\'c8\'a1\'d0\'c5\'cf\'a2\'a3\'ac\'b0\'fc\'c0\'a8
+\f3  
+\f1 \'ba\'c3\'d3\'d1\'a3\'ac\'ba\'c3\'d3\'d1\'ba\'da\'c3\'fb\'b5\'a5\'a3\'ac\'d7\'d4\'bc\'ba\'cf\'e0\'b9\'d8\'b5\'c4\'c8\'ba\'d7\'e9\'a3\'ac\'b1\'bb\'c6\'c1\'b1\'ce\'b5\'c4\'c8\'ba\'d7\'e9\'b5\'c4
+\f3 id
+\f1 \'ca\'fd\'d7\'e9\'a3\'ac\'bb\'e1\'bb\'b0\'a3\'ac\'cf\'fb\'cf\'a2
+\f3 \
+ @discussion 
+\f1 \'b5\'c7\'c2\'bc\'b3\'c9\'b9\'a6\'d6\'ae\'ba\'f3\'b5\'f7\'d3\'c3
+\f3 \
+ @result     
+\f1 \'b4\'ed\'ce\'f3\'d0\'c5\'cf\'a2
+\f3 \
+ */\cf1 \
+\cf7 - (EMError *)loadDataFromDatabase;
+\f1 \
+\
+
+\f3 \cf5 B
+\f1 \'a1\'a2IChatManagerConversation\
+\cf7 \
+1\'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'c9\'be\'b3\'fd\'cb\'f9\'d3\'d0\'bb\'e1\'bb\'b0\'b6\'d4\'cf\'f3
+\f3 \
+ @discussion\
+ @param chatters        
+\f1 \'d2\'aa\'b1\'bb\'c9\'be\'b3\'fd\'b5\'c4\'bb\'e1\'bb\'b0\'b6\'d4\'cf\'f3\'cb\'f9\'b6\'d4\'d3\'a6\'b5\'c4\'d3\'c3\'bb\'a7\'c3\'fb\'c1\'d0\'b1\'ed
+\f3 \
+ @param aDeleteMessages 
+\f1 \'ca\'c7\'b7\'f1\'c9\'be\'b3\'fd\'d5\'e2\'b8\'f6\'bb\'e1\'bb\'b0\'b6\'d4\'cf\'f3\'cb\'f9\'b9\'d8\'c1\'aa\'b5\'c4\'c1\'c4\'cc\'ec\'bc\'c7\'c2\'bc
+\f3 \
+ @result 
+\f1 \'ca\'c7\'b7\'f1\'b3\'c9\'b9\'a6\'d6\'b4\'d0\'d0
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)removeAllConversationsByChatter:(NSString *)chatter deleteMessages:(BOOL)aDeleteMessages;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b1\'a3\'b4\'e6\'d2\'bb\'d7\'e9\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 (
+\f1 \'cd\'c6\'bc\'f6\'d3\'c3\'b7\'a8\'a3\'ac\'cb\'d9\'b6\'c8\'d3\'d0\'be\'aa\'cf\'b2\'c5\'b6
+\f3 )\
+ @param messages 
+\f1 \'b4\'fd\'b1\'a3\'b4\'e6\'b5\'c4\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2\'c1\'d0\'b1\'ed
+\f3 \
+ @param chatter  
+\f1 \'b1\'d8\'cc\'ee\'d1\'a1\'cf\'ee\'a3\'ac
+\f3 message
+\f1 \'b5\'c4
+\f3 conversationChatter\
+ @param append2Chat 
+\f1 \'ca\'c7\'b7\'f1\'b5\'f7\'d3\'c3\'cf\'e0\'b9\'d8\'bb\'d8\'b5\'f7\'b7\'bd\'b7\'a8
+\f3 \
+ @return 
+\f1 \'ca\'c7\'b7\'f1\'b3\'c9\'b9\'a6\'b2\'e5\'c8\'eb
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)insertMessagesToDB:(NSArray *)messages\
+                forChatter:(NSString *)chatter\
+               append2Chat:(BOOL)append2Chat;
+\f1 \
+\
+
+\f3 \cf5 C
+\f1 \'a1\'a2IChatManagerGroup\cf7 \
+\
+1\'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief  
+\f1 \'b4\'d3\'ca\'fd\'be\'dd\'bf\'e2\'bb\'f1\'c8\'a1\'d3\'eb\'b5\'c7\'c2\'bd\'d5\'df\'cf\'e0\'b9\'d8\'b5\'c4\'c8\'ba\'d7\'e9
+\f3 \
+ @return 
+\f1 \'b4\'ed\'ce\'f3\'d0\'c5\'cf\'a2
+\f3 \
+ @discussion\
+ */\cf1 \
+\cf7 - (NSArray *)loadAllMyGroupsFromDatabase\cf1 ;\
+\
+\cf5 D
+\f1 \'a1\'a2
+\f3 EMChatManagerLoginDelegate\
+\cf1 \
+\cf7 1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'d3\'c3\'bb\'a7\'bd\'ab\'d2\'aa\'bd\'f8\'d0\'d0\'d7\'d4\'b6\'af\'b5\'c7\'c2\'bc\'b2\'d9\'d7\'f7\'b5\'c4\'bb\'d8\'b5\'f7
+\f3 \
+ @discussion\
+ @param loginInfo 
+\f1 \'b5\'c7\'c2\'bc\'b5\'c4\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f3 \
+ @param error     
+\f1 \'b4\'ed\'ce\'f3\'d0\'c5\'cf\'a2
+\f3 \
+ @result\
+ */\cf1 \
+\cf7 - (void)willAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error;\
+\cf1 \
+\cf7 2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'d3\'c3\'bb\'a7\'d7\'d4\'b6\'af\'b5\'c7\'c2\'bc\'cd\'ea\'b3\'c9\'ba\'f3\'b5\'c4\'bb\'d8\'b5\'f7
+\f3 \
+ @discussion\
+ @param loginInfo 
+\f1 \'b5\'c7\'c2\'bc\'b5\'c4\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f3 \
+ @param error     
+\f1 \'b4\'ed\'ce\'f3\'d0\'c5\'cf\'a2
+\f3 \
+ @result\
+ */\cf1 \
+\cf7 - (void)didAutoLoginWithInfo:(NSDictionary *)loginInfo error:(EMError *)error;\
+\
+\cf5 E
+\f1 \'a1\'a2
+\f3 EMMessage\cf7 \
+\
+1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief  
+\f1 \'b8\'fc\'d0\'c2\'cf\'fb\'cf\'a2\'b7\'a2\'cb\'cd\'d7\'b4\'cc\'ac
+\f3 \
+ @result 
+\f1 \'ca\'c7\'b7\'f1\'b8\'fc\'d0\'c2\'b3\'c9\'b9\'a6
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)updateMessageDeliveryStateToDB;\cf1 \
+\
+\cf7 2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief  
+\f1 \'b8\'fc\'d0\'c2\'cf\'fb\'cf\'a2\'c0\'a9\'d5\'b9\'ca\'f4\'d0\'d4
+\f3 \
+ @result 
+\f1 \'ca\'c7\'b7\'f1\'b8\'fc\'d0\'c2\'b3\'c9\'b9\'a6
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)updateMessageExtToDB;\
+\
+3
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief  
+\f1 \'b8\'fc\'d0\'c2\'cf\'fb\'cf\'a2\'b5\'c4\'cf\'fb\'cf\'a2\'cc\'e5
+\f3 \
+ @result 
+\f1 \'ca\'c7\'b7\'f1\'b8\'fc\'d0\'c2\'b3\'c9\'b9\'a6
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)updateMessageBodiesToDB;\
+\cf1 \
+\cf7 4
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief  
+\f1 \'d0\'de\'b8\'c4\'b5\'b1\'c7\'b0
+\f3  message 
+\f1 \'b5\'c4\'b7\'a2\'cb\'cd\'d7\'b4\'cc\'ac
+\f3 , 
+\f1 \'cf\'c2\'d4\'d8\'d7\'b4\'cc\'ac\'ce\'aa
+\f3  failed (crash 
+\f1 \'ca\'b1\'bb\'f2\'d5\'df
+\f3  terminate)\
+ @return 
+\f1 \'ca\'c7\'b7\'f1\'b8\'fc\'d0\'c2\'b3\'c9\'b9\'a6
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)updateMessageStatusFailedToDB;\
+\
+\cf5 F
+\f1 \'a1\'a2
+\f3 \cf8 EMChatManagerChatDelegate\
+\cf7 1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'ca\'d5\'b5\'bd\'cf\'fb\'cf\'a2\'ca\'b1\'b5\'c4\'bb\'d8\'b5\'f7
+\f3 \
+ @param cmdMessage      
+\f1 \'cf\'fb\'cf\'a2\'b6\'d4\'cf\'f3
+\f3 \
+ @discussion 
+\f1 \'b5\'b1
+\f3 EMConversation
+\f1 \'b6\'d4\'cf\'f3\'b5\'c4
+\f3 enableReceiveMessage
+\f1 \'ca\'f4\'d0\'d4\'ce\'aa
+\f3 YES
+\f1 \'ca\'b1
+\f3 , 
+\f1 \'bb\'e1\'b4\'a5\'b7\'a2\'b4\'cb\'bb\'d8\'b5\'f7
+\f3 \
+ 
+\f1 \'d5\'eb\'b6\'d4\'d3\'d0\'b8\'bd\'bc\'fe\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b4\'cb\'ca\'b1\'b8\'bd\'bc\'fe\'bb\'b9\'ce\'b4\'b1\'bb\'cf\'c2\'d4\'d8
+\f3 .\
+ 
+\f1 \'b8\'bd\'bc\'fe\'cf\'c2\'d4\'d8\'b9\'fd\'b3\'cc\'d6\'d0\'b5\'c4\'bd\'f8\'b6\'c8\'bb\'d8\'b5\'f7\'c7\'eb\'b2\'ce\'bf\'bc
+\f3 didFetchingMessageAttachments:progress:,\
+ 
+\f1 \'cf\'c2\'d4\'d8\'cd\'ea\'cb\'f9\'d3\'d0\'b8\'bd\'bc\'fe\'ba\'f3
+\f3 , 
+\f1 \'bb\'d8\'b5\'f7
+\f3 didMessageAttachmentsStatusChanged:error:
+\f1 \'bb\'e1\'b1\'bb\'b4\'a5\'b7\'a2
+\f3 \
+ */\cf1 \
+\cf7 - (void)didReceiveCmdMessage:(EMMessage *)cmdMessage;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'c0\'eb\'cf\'df\'cd\'b8\'b4\'ab\'cf\'fb\'cf\'a2\'bd\'d3\'ca\'d5\'cd\'ea\'b3\'c9\'b5\'c4\'bb\'d8\'b5\'f7
+\f3 \
+ @discussion\
+ @param offlineCmdMessages 
+\f1 \'bd\'d3\'ca\'d5\'b5\'bd\'b5\'c4\'c0\'eb\'cf\'df\'cd\'b8\'b4\'ab\'cf\'fb\'cf\'a2\'c1\'d0\'b1\'ed
+\f3 \
+ @result\
+ */\cf1 \
+\cf7 - (void)didFinishedReceiveOfflineCmdMessages:(NSArray *)offlineCmdMessages;
+\f1 \
+\cf4 \
+
+\fs72 \cf9 \'b6\'fe\'a1\'a2change api
+\fs28 \cf7 \
+\
+\cf10 A\'a1\'a2IChatManagerSettingOptions\cf7 \
+\
+1\'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'b5\'b1\'c7\'b0\'b5\'c7\'c2\'bd\'d3\'c3\'bb\'a7\'b5\'c4\'ea\'c7\'b3\'c6
+\f3 , 
+\f1 \'c4\'ac\'c8\'cf\'ce\'aa\'d3\'c3\'bb\'a7\'c3\'fb
+\f3 \
+ */\cf1 \
+\cf7 @property (strong, nonatomic) NSString *nickname \cf11 EM_DEPRECATED_IOS\cf3 (2_0_6, 2_1_1, "apnsNickname")\cf7 ;\cf1 \
+\cf7 @property (strong, nonatomic) NSString *apnsNickname;
+\f1 \
+\
+
+\f3 2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'d7\'d4\'b6\'af\'bb\'f1\'c8\'a1\'ba\'c3\'d3\'d1\'c1\'d0\'b1\'ed
+\f3 (
+\f1 \'b0\'fc\'c0\'a8\'ba\'c3\'d3\'d1\'ba\'da\'c3\'fb\'b5\'a5\'a3\'ac
+\f3 Default is NO), 
+\f1 \'b5\'b1\'ce\'aa
+\f3  YES
+\f1 \'ca\'b1
+\f3 , 
+\f1 \'b5\'c7\'c2\'bc\'b3\'c9\'b9\'a6\'ba\'f3\'bb\'e1\'d7\'d4\'b6\'af\'b5\'f7\'d3\'c3
+\f3  asyncFetchBuddyList 
+\f1 \'b7\'bd\'b7\'a8
+\f3 \
+ */\cf1 \
+\cf7 @property (nonatomic) BOOL autoFetchBuddyList \cf11 EM_DEPRECATED_IOS\cf2 (2_0_9, 2_1_1, "isAutoFetchBuddyList")\cf7 ;\cf1 \
+\cf7 @property (nonatomic) BOOL isAutoFetchBuddyList;
+\f1\fs24 \cf0 \CocoaLigature1 \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf10 B\'a1\'a2
+\fs28 \CocoaLigature0 IChatManagerConversation
+\fs24 \cf0 \CocoaLigature1 \
+\
+1\'a1\'a2
+\f3\fs28 \cf6 \CocoaLigature0 /*!\
+\pard\tx674\pardeftab674\pardirnatural
+\cf6  @method\
+ @brief 
+\f1 \'bb\'f1\'c8\'a1\'b5\'b1\'c7\'b0\'b5\'c7\'c2\'bc\'d3\'c3\'bb\'a7\'b5\'c4\'bb\'e1\'bb\'b0\'c1\'d0\'b1\'ed
+\f3 \
+ @discussion\
+ @result 
+\f1 \'bb\'e1\'bb\'b0\'b6\'d4\'cf\'f3\'c1\'d0\'b1\'ed
+\f3 \
+ */\cf1 \
+\cf7 - (NSArray *)loadAllConversations\cf1  \cf11 EM_DEPRECATED_IOS\cf2 (2_0_8, 2_1_1, "Use - loadAllConversationsFromDatabase")\cf7 ;\
+- (NSArray *)loadAllConversationsFromDatabase;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b1\'a3\'b4\'e6\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2\'b5\'bd
+\f3 DB\
+ @param message 
+\f1 \'b4\'fd\'b1\'a3\'b4\'e6\'b5\'c4\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 \
+ @return 
+\f1 \'ca\'c7\'b7\'f1\'b3\'c9\'b9\'a6\'b1\'a3\'b4\'e6\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 \
+ @discussion \
+        
+\f1 \'cf\'fb\'cf\'a2\'bb\'e1\'d6\'b1\'bd\'d3\'b1\'a3\'b4\'e6\'b5\'bd\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0
+\f3 ,
+\f1 \'b2\'a2\'b2\'bb\'bb\'e1\'b5\'f7\'d3\'c3\'cf\'e0\'b9\'d8\'bb\'d8\'b5\'f7\'b7\'bd\'b7\'a8
+\f3 ;\
+        
+\f1 \'c8\'f4\'cf\'a3\'cd\'fb\'b5\'f7\'d3\'c3\'cf\'e0\'b9\'d8\'bb\'d8\'b5\'f7\'b7\'bd\'b7\'a8
+\f3 ,
+\f1 \'c7\'eb\'ca\'b9\'d3\'c3
+\f3 insertMessageToDB:append2Chat:\
+ */\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf12 - (BOOL)saveMessage:(EMMessage *)message \cf11 EM_DEPRECATED_IOS\cf2 (2_0_6, 2_1_1, "Use - insertMessageToDB:")\cf7 ;\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 - (BOOL)insertMessageToDB:(EMMessage *)message;\cf1 \
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf13 3
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b5\'bc\'c8\'eb\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 \
+ @param message 
+\f1 \'b4\'fd\'b5\'bc\'c8\'eb\'b5\'c4\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 \
+ @param append2Chat 
+\f1 \'ca\'c7\'b7\'f1\'b5\'f7\'d3\'c3\'cf\'e0\'b9\'d8\'bb\'d8\'b5\'f7\'b7\'bd\'b7\'a8
+\f3 \
+ @return 
+\f1 \'ca\'c7\'b7\'f1\'b3\'c9\'b9\'a6\'b5\'bc\'c8\'eb\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 \
+ */\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 - (BOOL)importMessage:(EMMessage *)message\
+          append2Chat:(BOOL)append2Chat  \cf11 EM_DEPRECATED_IOS\cf2 (2_0_6, 2_1_1, "Use - insertMessageToDB:append2Chat:")\cf7 ;\cf1 \
+\
+\cf7 - (BOOL)insertMessageToDB:(EMMessage *)message\
+              append2Chat:(BOOL)append2Chat;\
+\cf1 \
+\cf7 4
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b1\'a3\'b4\'e6\'d2\'bb\'d7\'e9\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2
+\f3 \
+ @param messages 
+\f1 \'b4\'fd\'b1\'a3\'b4\'e6\'b5\'c4\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2\'c1\'d0\'b1\'ed
+\f3 \
+ @return 
+\f1 \'b3\'c9\'b9\'a6\'b1\'a3\'b4\'e6\'b5\'c4\'c1\'c4\'cc\'ec\'cf\'fb\'cf\'a2\'cc\'f5\'ca\'fd
+\f3 \
+ */\cf1 \
+\cf7 - (NSInteger)saveMessages:(NSArray *)messages \cf11 EM_DEPRECATED_IOS\cf2 (2_0_6, 2_1_1, "Use - insertMessagesToDB:")\cf7 ;\cf1 \
+\
+\cf7 - (NSInteger)insertMessagesToDB:(NSArray *)messages;\
+\
+\cf5 C
+\f1 \'a1\'a2
+\f3 EMConversation\cf7 \
+\
+1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'c9\'be\'b3\'fd\'bb\'e1\'bb\'b0\'b6\'d4\'cf\'f3\'ba\'cd\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'cf\'e0\'b9\'d8\'c1\'aa\'b5\'c4\'c4\'b3\'d2\'bb\'cc\'f5\'cf\'fb\'cf\'a2
+\f3 \
+ @discussion 
+\f1 \'c8\'e7\'b9\'fb\'b4\'cb\'cf\'fb\'cf\'a2\'b2\'bb\'ca\'f4\'d3\'da\'bb\'f2\'b2\'bb\'b4\'e6\'d4\'da\'d3\'da\'b4\'cb\'bb\'e1\'bb\'b0
+\f3 , 
+\f1 \'d4\'f2\'b2\'bb\'bb\'e1\'bd\'f8\'d0\'d0\'c9\'be\'b3\'fd
+\f3 \
+ @param aMessageId 
+\f1 \'bd\'ab\'d2\'aa\'c9\'be\'b3\'fd\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 ID\
+ @result 
+\f1 \'ca\'c7\'b7\'f1\'b3\'c9\'b9\'a6\'c9\'be\'b3\'fd\'b4\'cb\'cf\'fb\'cf\'a2
+\f3 \
+ */\cf1 \
+\cf7 - (BOOL)removeMessage:(NSString *)aMessageId \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Delete")\cf7 ;\cf1 \
+\cf7 - (BOOL)removeMessageWithId:(NSString *)aMessageId;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'c9\'be\'b3\'fd\'bb\'e1\'bb\'b0\'b6\'d4\'cf\'f3\'ba\'cd\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'cf\'e0\'b9\'d8\'c1\'aa\'b5\'c4\'c4\'b3\'bc\'b8\'cc\'f5\'cf\'fb\'cf\'a2
+\f3 \
+ @discussion 
+\f1 \'c8\'e7\'b9\'fb\'cf\'fb\'cf\'a2\'b2\'bb\'ca\'f4\'d3\'da\'bb\'f2\'b2\'bb\'b4\'e6\'d4\'da\'d3\'da\'b4\'cb\'bb\'e1\'bb\'b0
+\f3 , 
+\f1 \'d4\'f2\'b2\'bb\'bb\'e1\'bd\'f8\'d0\'d0\'c9\'be\'b3\'fd\'cf\'e0\'d3\'a6\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 \
+ @param aMessageIds 
+\f1 \'bd\'ab\'d2\'aa\'c9\'be\'b3\'fd\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 ID
+\f1 \'c1\'d0\'b1\'ed
+\f3 \
+ @result 
+\f1 \'b3\'c9\'b9\'a6\'c9\'be\'b3\'fd\'b5\'c4\'cf\'fb\'cf\'a2\'cc\'f5\'ca\'fd
+\f3 \
+ */\cf1 \
+\cf7 - (NSUInteger)removeMessages:(NSArray *)aMessageIds \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Use - removeMessagesWithIds:")\cf7 ;\cf1 \
+\cf7 - (NSUInteger)removeMessagesWithIds:(NSArray *)aMessageIds;\
+\
+3
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b8\'f9\'be\'dd\'cf\'fb\'cf\'a2
+\f3 ID
+\f1 \'b4\'d3\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'bc\'d3\'d4\'d8\'cf\'fb\'cf\'a2
+\f3 \
+ @discussion 
+\f1 \'c8\'e7\'b9\'fb\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'c3\'bb\'d3\'d0\'d5\'e2\'cc\'f5\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b7\'bd\'b7\'a8\'b7\'b5\'bb\'d8
+\f3 nil\
+ @param aMessageId 
+\f1 \'cf\'fb\'cf\'a2
+\f3 ID\
+ @result 
+\f1 \'bc\'d3\'d4\'d8\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 \
+ */\cf1 \
+\cf7 - (EMMessage *)loadMessage:(NSString *)aMessageId\cf10  EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Use - loadMessageWithId:")\cf7 ;\cf1 \
+\cf7 - (EMMessage *)loadMessageWithId:(NSString *)aMessageId;\cf1 \
+\
+\cf7 4
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b8\'f9\'be\'dd\'cf\'fb\'cf\'a2
+\f3 ID
+\f1 \'c1\'d0\'b1\'ed\'b4\'d3\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'bc\'d3\'d4\'d8\'cf\'fb\'cf\'a2
+\f3 \
+ @discussion 
+\f1 \'c8\'e7\'b9\'fb\'ca\'fd\'be\'dd\'bf\'e2\'d6\'d0\'c3\'bb\'d3\'d0\'c4\'b3\'cc\'f5\'cf\'fb\'cf\'a2\'b6\'d4\'d3\'a6\'b5\'c4
+\f3 ID, 
+\f1 \'d4\'f2\'b2\'bb\'bc\'d3\'d4\'d8\'d5\'e2\'cc\'f5\'cf\'fb\'cf\'a2
+\f3 \
+ @param aMessageIds 
+\f1 \'cf\'fb\'cf\'a2
+\f3 ID
+\f1 \'c1\'d0\'b1\'ed
+\f3 \
+ @result 
+\f1 \'bc\'d3\'d4\'d8\'b5\'c4\'cf\'fb\'cf\'a2\'c1\'d0\'b1\'ed
+\f3 \
+ */\cf1 \
+\cf7 - (NSArray *)loadMessages:(NSArray *)aMessageIds\cf10  EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Use - loadMessagesWithIds:")\cf7 ;\cf1 \
+\cf7 - (NSArray *)loadMessagesWithIds:(NSArray *)aMessageIds;\
+\
+5
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @method\
+ @brief 
+\f1 \'b0\'d1\'b1\'be\'b6\'d4\'bb\'b0\'c0\'ef\'b5\'c4\'cb\'f9\'d3\'d0\'cf\'fb\'cf\'a2\'b1\'ea\'bc\'c7\'ce\'aa\'d2\'d1\'b6\'c1
+\f3 /
+\f1 \'ce\'b4\'b6\'c1
+\f3 \
+ @param isRead 
+\f1 \'d2\'d1\'b6\'c1\'bb\'f2\'ce\'b4\'b6\'c1
+\f3 \
+ @result 
+\f1 \'b3\'c9\'b9\'a6\'b1\'ea\'bc\'c7\'b5\'c4\'cf\'fb\'cf\'a2\'cc\'f5\'ca\'fd
+\f3 \
+ */\cf1 \
+\cf7 - (NSUInteger)markMessagesAsRead:(BOOL)isRead\cf1  \cf11 EM_DEPRECATED_IOS\cf7 (2_0_0, 2_1_1, "Use - markAllMessagesAsRead:");\cf1 \
+\cf7 - (BOOL)markAllMessagesAsRead:(BOOL)isRead;\
+\
+\cf5 D
+\f1 \'a1\'a2
+\f3 EMMessage\cf7 \
+\
+1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'ca\'c7\'b7\'f1\'bd\'d3\'ca\'d5\'b5\'bd\'c1\'cb\'bd\'d3\'ca\'d5\'b7\'bd\'b5\'c4\'d4\'c4\'b6\'c1\'bb\'d8\'d6\'b4
+\f3 , 
+\f1 \'bb\'f2\'ca\'c7\'b7\'f1\'d2\'d1\'b7\'a2\'cb\'cd\'c1\'cb\'d4\'c4\'b6\'c1\'bb\'d8\'d6\'b4\'b8\'f8\'b6\'d4\'b7\'bd
+\f3 \
+ @discussion 
+\f1 \'d5\'eb\'b6\'d4\'b7\'a2\'cb\'cd\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b5\'b1\'bd\'d3\'ca\'d5\'b7\'bd\'b6\'c1\'c1\'cb\'cf\'fb\'cf\'a2\'ba\'f3
+\f3 , 
+\f1 \'bb\'e1\'b7\'a2\'bb\'d8\'d2\'d1\'b6\'c1\'bb\'d8\'d6\'b4
+\f3 , 
+\f1 \'bd\'d3\'ca\'d5\'b5\'bd\'c1\'cb\'d2\'d1\'b6\'c1\'bb\'d8\'d6\'b4
+\f3 , 
+\f1 \'b4\'cb\'b1\'ea\'bc\'c7\'ce\'bb\'bb\'e1\'b1\'bb\'d6\'c3\'ce\'aa
+\f3 YES; \
+             
+\f1 \'d5\'eb\'b6\'d4\'bd\'d3\'ca\'d5\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b7\'a2\'cb\'cd\'c1\'cb\'d4\'c4\'b6\'c1\'bb\'d8\'d6\'b4\'ba\'f3
+\f3 , 
+\f1 \'b4\'cb\'b1\'ea\'bc\'c7\'bb\'e1\'b1\'bb\'d6\'c3\'ce\'aa
+\f3 YES\
+ */\cf1 \
+\cf7 @property (nonatomic) BOOL isAcked \cf11 EM_DEPRECATED_IOS\cf1 (\cf2 2_0_0, 2_1_1, "Use -isReadAcked")\cf7 ;\cf1 \
+\cf7 @property (nonatomic) BOOL isReadAcked;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'b6\'d4\'d3\'da\'b7\'a2\'cb\'cd\'b7\'bd\'c0\'b4\'cb\'b5
+\f3 , 
+\f1 \'b8\'c3\'d6\'b5\'b1\'ed\'ca\'be
+\f3 :
+\f1 \'bd\'d3\'ca\'d5\'b7\'bd\'ca\'c7\'b7\'f1\'d2\'d1\'ca\'d5\'b5\'bd\'c1\'cb\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b6\'d4\'d3\'da\'bd\'d3\'ca\'d5\'b7\'bd\'c0\'b4\'cb\'b5
+\f3 , 
+\f1 \'b1\'ed\'ca\'be
+\f3 :
+\f1 \'bd\'d3\'ca\'d5\'b7\'bd\'ca\'c7\'b7\'f1\'d2\'d1\'b7\'a2\'cb\'cd\'c1\'cb
+\f3 "
+\f1 \'d2\'d1\'bd\'d3\'ca\'d5\'bb\'d8\'d6\'b4
+\f3 " 
+\f1 \'b8\'f8\'b6\'d4\'b7\'bd
+\f3 \
+ @discussion 
+\f1 \'d5\'eb\'b6\'d4\'b7\'a2\'cb\'cd\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b5\'b1\'bd\'d3\'ca\'d5\'b7\'bd\'b6\'c1\'c1\'cb\'cf\'fb\'cf\'a2\'ba\'f3
+\f3 , 
+\f1 \'bb\'e1\'b7\'a2\'bb\'d8\'d2\'d1\'b6\'c1\'bb\'d8\'d6\'b4
+\f3 , 
+\f1 \'bd\'d3\'ca\'d5\'b5\'bd\'c1\'cb\'d2\'d1\'b6\'c1\'bb\'d8\'d6\'b4
+\f3 , 
+\f1 \'b4\'cb\'b1\'ea\'bc\'c7\'ce\'bb\'bb\'e1\'b1\'bb\'d6\'c3\'ce\'aa
+\f3 YES;\
+ 
+\f1 \'d5\'eb\'b6\'d4\'bd\'d3\'ca\'d5\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 , 
+\f1 \'b7\'a2\'cb\'cd\'c1\'cb\'d4\'c4\'b6\'c1\'bb\'d8\'d6\'b4\'ba\'f3
+\f3 , 
+\f1 \'b4\'cb\'b1\'ea\'bc\'c7\'bb\'e1\'b1\'bb\'d6\'c3\'ce\'aa
+\f3 YES\
+ */\cf1 \
+\cf7 @property (nonatomic) BOOL isDelivered \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Use -isDeliveredAcked")\cf7 ;\cf1 \
+\cf7 @property (nonatomic) BOOL isDeliveredAcked;\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf10 E
+\f1 \'a1\'a2
+\f3 IEMFileMessageBody\cf7 \
+\
+1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @enum\
+ @brief 
+\f1 \'b8\'bd\'bc\'fe\'cf\'c2\'d4\'d8\'b5\'c4\'d7\'b4\'cc\'ac
+\f3 \
+ @constant eAttachmentDownloading       
+\f1 \'d5\'fd\'d4\'da\'cf\'c2\'d4\'d8
+\f3 \
+ @constant eAttachmentDownloadSuccessed 
+\f1 \'cf\'c2\'d4\'d8\'b3\'c9\'b9\'a6
+\f3 \
+ @constant eAttachmentDownloadFailure   
+\f1 \'cf\'c2\'d4\'d8\'ca\'a7\'b0\'dc
+\f3 \
+ @constant eAttachmentNone              
+\f1 \'ce\'b4\'cf\'c2\'d4\'d8
+\f3 \
+ */\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 typedef enum : NSUInteger \{\
+    EMAttachmentDownloading,\
+    EMAttachmentDownloadSuccessed,\
+    EMAttachmentDownloadFailure,\
+    
+\f4 \cf14 \cb15 \CocoaLigature1 EMAttachmentNotStarted
+\f3 \cf7 \cb1 \CocoaLigature0 ,\
+\} EMAttachmentDownloadStatus;\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf10 F
+\f1 \'a1\'a2
+\f3 IChatManagerPushNotification\cf7 \
+\
+1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief     
+\f1 \'d2\'d1\'c6\'c1\'b1\'ce\'bd\'d3\'ca\'d5\'cd\'c6\'cb\'cd\'cf\'fb\'cf\'a2\'b5\'c4\'c8\'ba
+\f3 ID
+\f1 \'c1\'d0\'b1\'ed
+\f3 \
+ */\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 @property (nonatomic, strong, readonly) NSArray *ignoredGroupList\cf1  \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Use - ignoredGroupIds")\cf7 ;\cf1 \
+\cf7 @property (nonatomic, strong, readonly) NSArray *ignoredGroupIds;\
+\
+
+\f1\fs72 \cf9 \'c8\'fd\'a1\'a2Delete api
+\fs28 \cf7 \
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf16 A\'a1\'a2EMConversation\cf7 \
+\
+1\'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'b4\'cb\'bb\'e1\'bb\'b0\'d6\'d0\'b5\'c4\'cf\'fb\'cf\'a2\'c1\'d0\'b1\'ed
+\f3 \
+ */\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 @property (nonatomic, strong, readonly) NSArray *messages\cf1  \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Delete")\cf7 ;\
+\
+2
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'ca\'c7\'b7\'f1\'bd\'d3\'ca\'d5\'b9\'d8\'d3\'da\'b4\'cb\'bb\'e1\'bb\'b0\'b5\'c4\'cf\'fb\'cf\'a2
+\f3 \
+ */\cf1 \
+\cf7 @property (nonatomic, readwrite) BOOL enableReceiveMessage \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Delete")\cf7 ;\
+\
+\pard\tx674\pardeftab674\pardirnatural
+\cf16 B
+\f1 \'a1\'a2
+\f3 EMMessage\cf7 \
+\
+1
+\f1 \'a1\'a2
+\f3 \cf6 /*!\
+ @property\
+ @brief 
+\f1 \'cf\'fb\'cf\'a2\'cb\'f9\'ca\'f4\'b5\'c4\'b6\'d4\'bb\'b0\'b6\'d4\'cf\'f3
+\f3 \
+ */\cf1 \
+\pard\tx674\pardeftab674\pardirnatural
+\cf7 @property (nonatomic, weak) EMConversation *conversation \cf11 EM_DEPRECATED_IOS\cf2 (2_0_0, 2_1_1, "Delete")\cf7 ;\cf1 \
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+}
