@@ -1,3 +1,23 @@
+版本：V2.1.3r3 2015-02-04
+紧急修复：
+1、ios2.1.3版本客户端创建群组，rest无法查到；
+
+版本：V2.1.3r2 2015-02-02
+紧急修复：
+1、覆盖安装自动登录失效；
+2、只引用libEaseMobClientSDKLite.a会调用到libCallServer.a的方法，造成crash；
+
+版本：V2.1.3 2015-01-31
+功能改进：
+1、优化登录操作；
+2、离线消息分为离线cmd消息和离线非cmd消息两种类型；
+3、因为安卓SDK暂时不支持多body，为了统一，IOS SDK请暂时不要使用多body的EMMessage结构。
+Bug Fix：
+1、修复：Database的数据存到了Document目录下，迁移到Library目录下；
+2、修复：特殊情况下，会出现收到离线消息的时候SDK中的Database还没有open, 造成第一条离线消息无法存进去;
+新功能：
+1、实时语音beta版。目前只支持wifi非relay情况下使用。如果想在黑屏状态或后台下能继续通话，请在工程里选择上"Voice over IP"或者“Audio and AirPlay”。
+
 版本：V2.1.2 2014-12-19
 功能改进：
 1、需要新引入libsqlite3.dylib；
