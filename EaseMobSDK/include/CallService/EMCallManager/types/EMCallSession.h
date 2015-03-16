@@ -18,9 +18,10 @@
 
 @property (nonatomic, readonly) EMCallSessionType type;
 
-@property (nonatomic, readonly) EMCallSessionStatus status;
+@property (nonatomic) EMCallSessionStatus status;
 
 
-- (instancetype)initWithType:(EMCallSessionType)type;
+- (instancetype)initWithSessionId:(NSString *)sessionId
+                             type:(EMCallSessionType)type;
 
 @end

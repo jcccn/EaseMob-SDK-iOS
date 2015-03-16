@@ -9,6 +9,8 @@
 #ifndef EaseMobClientSDK_EMSDKFullHeaders_h
 #define EaseMobClientSDK_EMSDKFullHeaders_h
 
+#import "EaseMob.h"
+
 #import "ICallManagerDelegate.h"
 
 #import "ICallManager.h"

@@ -16,8 +16,6 @@
 
 @required
 
-@property (nonatomic, strong) NSArray *callSessions;
-
 /*!
  @method
  @brief  语音通话音量，0 ~ 1
