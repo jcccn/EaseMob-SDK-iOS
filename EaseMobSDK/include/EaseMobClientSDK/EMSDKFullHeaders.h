@@ -1,20 +1,26 @@
-//
-//  EMSDKFullHeaders.h
-//  EaseMobClientSDK
-//
-//  Created by dhcdht on 14-10-27.
-//  Copyright (c) 2014年 EaseMob. All rights reserved.
-//
+/*!
+ @header EaseMobHeaders.h
+ @abstract 引入SDK的所有需要的头文件
+ @author EaseMob Inc.
+ @version 1.0
+ */
 
 #ifndef EaseMobClientSDK_EMSDKFullHeaders_h
 #define EaseMobClientSDK_EMSDKFullHeaders_h
 
 #import "EaseMob.h"
 
-#import "ICallManagerDelegate.h"
+// defs headers
+#import "EMCallServiceDefs.h"
 
+//manager
 #import "ICallManager.h"
 
+//delegate
+#import "EMCallManagerDelegate.h"
+
+
+//type
 #import "EMCallSession.h"
 
 

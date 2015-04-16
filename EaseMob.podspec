@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'EaseMob'
-  spec.version      = '2.1.4'
+  spec.version      = '2.1.5'
   spec.summary      = 'The iOS SDK for EaseMob IM cloud service.'
   spec.homepage     = 'https://github.com/jcccn/EaseMob-SDK-iOS'
   spec.author       = { 'Chuncheng Jiang' => 'jccuestc@gmail.com' }
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
                        ©2014 EaseMob Inc.
                        LICENSE
                      }
-  spec.source       =  {:git => 'https://github.com/jcccn/EaseMob-SDK-iOS.git', :tag => '2.1.4'}
+  spec.source       =  {:git => 'https://github.com/jcccn/EaseMob-SDK-iOS.git', :tag => '2.1.5'}
   spec.platform     = :ios, '6.0'
   spec.requires_arc = true
   spec.xcconfig     = {'OTHER_LDFLAGS' => '-lObjC'}

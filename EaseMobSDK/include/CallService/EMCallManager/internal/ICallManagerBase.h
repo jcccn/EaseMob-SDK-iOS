@@ -1,15 +1,19 @@
-//
-//  ICallManagerBase.h
-//  EaseMobClientSDK
-//
-//  Created by Ji Fang on 9/23/14.
-//  Copyright (c) 2014 EaseMob. All rights reserved.
-//
+/*!
+ @header ICallManagerBase.h
+ @abstract 为CallManager提供基础消息操作
+ @author EaseMob Inc.
+ @version 1.00 2014/01/01 Creation (1.00)
+ */
 
 #import <Foundation/Foundation.h>
 
 @protocol EMCallManagerDelegate;
 
+/*!
+ @protocol
+ @brief 实时通话的基础协议, 用于注册对象到监听列表和从监听列表中移除对象
+ @discussion
+ */
 @protocol ICallManagerBase <NSObject>
 
 @required

@@ -1,21 +1,16 @@
-//
-//  ICallManager.h
-//  EaseMobClientSDK
-//
-//  Created by Ji Fang on 9/23/14.
-//  Copyright (c) 2014 EaseMob. All rights reserved.
-//
+/*!
+ @header ICallManager.h
+ @abstract 此接口提供了实时通话的基本操作
+ @author EaseMob Inc.
+ @version 1.00 2014/01/01 Creation (1.00)
+ */
 
 #import <Foundation/Foundation.h>
-#import "ICallManagerCall.h"
-#import "ICallManagerHistory.h"
-#import "ICallManagerAddressbook.h"
-#import "ICallManagerUtil.h"
 
-@protocol ICallManager <ICallManagerCall,
-                        ICallManagerAddressbook,
-                        ICallManagerHistory,
-                        ICallManagerUtil>
+#import "ICallManagerBase.h"
+#import "ICallManagerCall.h"
+
+@protocol ICallManager <ICallManagerBase, ICallManagerCall>
 
 @required
 
