@@ -1,3 +1,12 @@
+版本：V2.1.6 2015-04-30
+性能优化
+1、优化wifi && 非rely环境下的实时语音接通率；
+2、减小实时语音的静态库大小；
+新功能：
+1、添加实时视频功能，beta版。需要在demo中添加依赖库libc++.dylib，实时视频不支持后台运行。 
+2、添加接口：离开群时是否自动删除群会话(Default is YES)，该接口的设置不会进行存储，需要开发者每次启动sdk之前设置一下 [[EaseMob sharedInstance].chatManager isAutoDeleteConversationWhenLeaveGroup];
+3、接口修改，具体请参考2.1.6release note http://www.easemob.com/docs/ios/releaseNote2_1_6/
+
 版本：V2.1.5 2015-04-08
 bug fix：
 1、调用申请加入群组[applyJoinPublicGroup:]相关接口，有时会出现发送申请失败的情况；
