@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
   spec.name         = 'EaseMob'
-  spec.version      = '2.2.1'
+  spec.version      = '3.0.1'
   spec.summary      = 'The iOS SDK for EaseMob IM cloud service.'
   spec.homepage     = 'https://github.com/jcccn/EaseMob-SDK-iOS'
   spec.author       = { 'Chuncheng Jiang' => 'jccuestc@gmail.com' }
   spec.license      = { :type => 'Copyright', :text => <<-LICENSE
-                       © 环信2015 京ICP备14026002号
+                       © 北京易掌云峰科技有限公司2015 京ICP备14026002号
                        LICENSE
                      }
-  spec.source       =  {:git => 'https://github.com/jcccn/EaseMob-SDK-iOS.git', :tag => '2.2.1'}
+  spec.source       =  {:git => 'https://github.com/jcccn/EaseMob-SDK-iOS.git', :tag => '3.0.1'}
   spec.platform     = :ios, '6.0'
   spec.requires_arc = true
   spec.xcconfig     = {'OTHER_LDFLAGS' => '-lObjC'}
@@ -19,17 +19,10 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ChatService' do |chats|
     chats.requires_arc = true
-    chats.source_files = "EaseMobSDK/**/*.{h}"
-    chats.frameworks = 'Foundation', 'UIKit', 'MapKit', 'ImageIO', 'CoreLocation', 'Security', 'MobileCoreServices',  'SystemConfiguration', 'AddressBook', 'CFNetwork', 'CoreGraphics'
-    chats.libraries    = 'iconv', 'xml2', 'z', 'resolv', 'stdc++', 'sqlite3'
-    chats.resource     = 'EaseMobSDK/resources/EaseMob.bundle'
-    chats.vendored_libraries = 'EaseMobSDK/lib/libEaseMobClientSDKLite.a'
-  end
-
-  spec.subspec 'CallService' do |calls|
-    calls.requires_arc = true
-    calls.dependency 'EaseMob/ChatService'
-    calls.vendored_libraries = 'EaseMobSDK/lib/libEaseMobClientSDK.a'
+    chats.source_files = "HyphenateSDK/**/*.{h}"
+    chats.frameworks = 'CoreMedia', 'AudioToolbox', 'AVFoundation', 'MobileCoreServices', 'ImageIO', 'SystemConfiguration'
+    chats.libraries  = 'c++', 'resolv', 'z', 'tdc++.6.0.9', 'sqlite3'
+    chats.vendored_libraries = 'HyphenateSDK/lib/libHyphenateSDK.a'
   end
 
 end
